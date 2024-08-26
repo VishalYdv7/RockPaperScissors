@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="scoreboard">
+            <div class="title">
+                <h3>ROCK</h3>
+                <h3>PAPER</h3>
+                <h3>SCISSORS</h3>
+            </div>
+            <div class="score">
+                <p>COMPUTER</p>
+                <p>SCORE</p>
+                <span id="computer-score">0</span>
+            </div>
+            <div class="score">
+                <p>YOUR</p>
+                <p>SCORE</p>
+                <span id="player-score">0</span>
+            </div>
+        </div>
+        <div id="all-choices" class="">
+            <div id="choices" class="choices">
+                <div id="rock" class="choice">
+                    <img src="./images/rock-icon.png" alt="Rock">
+                </div>
+                <div id="scissors" class="choice">
+                    <img src="./images/scissors-icon.png" alt="Scissors">
+                </div>
+                <div id="paper" class="choice">
+                    <img src="./images/paper-icon.png" alt="Paper">
+                </div>
+            </div>
+            <!-- Connecting lines -->
+            <div class="line line-rock-scissors"></div>
+            <div class="line line-scissors-paper"></div>
+            <div class="line line-paper-rock"></div>
+        </div>
+        <div id="result" class="result hidden">
+            <div class="player-section">
+                <p>YOU PICKED</p>
+                <div id="player-choice" class="choice-result"></div>
+            </div>
+            <div class="full-result-text">
+                <p id="result-text"></p>
+                <p id="result-text-extra" class="result-text-extra">AGAINST PC</p>
+                <button id="play-again" class="hidden">PLAY AGAIN</button>
+            </div>
+            <div class="computer-section">
+                <p>PC PICKED</p>
+                <div id="computer-choice" class="choice-result"></div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="rules">Rules</button>
+            <button id="next" class="next hidden">Next</button>
+        </div>
+        <div id="full-game-rules" class="hidden ">
+            <div id="close" class="close">
+                X
+            </div>
+            <div class="gameRules">
+                <h4>GAME RULES</h4>
+                <ul>
+                    <li>
+                        Rock beats scissors, scissors beat paper, and paper beats rock.
+                    </li>
+                    <li>
+                        Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”
+                    </li>
+                    <li>
+                        Use rock, paper, scissors to settle minor decisions or simply play to pass the time
+                    </li>
+                    <li>
+                        If both players lay down the same hand, each player lays down another hand
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
